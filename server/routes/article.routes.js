@@ -40,13 +40,9 @@ router.get('/', ValidateToken, async (req, res) => {
 // /article/{articleId}
 router.get('/:id',ValidateToken, async (req, res) => {
 	const { id } = req.params;
-
-	// const article = articles.find((art) => art.id == id);
 	try {
 		const article = await Article.findById(id);
-
 		if (!article) return res.status(404).json({ msg: 'Article Not Found' });
-
 		res.json({
 			article,
 		});
@@ -59,86 +55,30 @@ router.get('/:id',ValidateToken, async (req, res) => {
 // /article
 router.post('/',ValidateToken,  async (req, res) => {
 	const { title, content } = req.body;
-	// lastId++;
-	// const article = {
-	//     id: lastId,
-	//     title,
-	//     content,
-	//     createdAt: new Date(),
-	//     publisher: user
-	// }
-
-	// articles.push(article)
 	const article = new Article({
 		title,
 		content,
 		publisher: req.user,
 	});
-
 	await article.save();
-
 	res.status(201).json({
 		article,
 	});
-
-	// const { title, content, } = req.body;
-	// lastId++;
-
-	// // const article = {
-	// //     id: lastId,
-	// //     title,
-	// //     content,
-	// //     createdAt: new Date(),
-	// //     publisher: user
-	// // }
-
-	// // articles.push(article)
-
-	// const article = new Article({
-	// 	title,
-	// 	content,
-	// 	publisher: user,
-	// });
-
-	// await article.save();
-
-	// res.status(201).json({
-	// 	article,
-	// });
 });
+
+// const body = {
+// 	name: 'ahmed',
+// 	age: 40
+// };
+
+// const {
+// 	age,
+// 	name
+// } = body;
 
 router.put('/:id',ValidateToken, async (req, res) => {
 	const { id } = req.params;
 	const { title, content } = req.body;
-
-	// const article = articles.find((art) => art.id == id);
-
-	// if (!article) return res.status(404).json({ msg: 'Article Not Found' });
-
-	// // OPTION 1
-	// article.title = title ? title : article.title;
-	// // OPTION 2
-	// if (content) {
-	// 	article.content = content;
-	// }
-
-	// OPTION 1
-
-	// const user = req.user;
-
-	// const article = await Article.findById(id);
-
-
-	// if (article.publisher.id != user.id) return res.status(403).json({
-	// 	msg: "You Are Not Allowed For This Action"
-	// })
-
-	// article.title = title ? title : article.title;
-	// article.content = content ? content :article.content;
-	// await article.save()
-
-	// OPTION 2
-
 	const user = req.user;
 	const update = {};
 	if (title) {

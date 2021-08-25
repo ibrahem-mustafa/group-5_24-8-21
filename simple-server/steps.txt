@@ -1,0 +1,15 @@
+// npm i express-generator
+// express "projectName"
+
+===================================
+
+// npm i express
+// npm i morgan
+// npm i mongoose
+
+
+========================
+
+// build model (DB)
+// build route
+// bing route to the app
