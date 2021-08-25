@@ -1,0 +1,5 @@
+S1: npm install -g @angular/cli //ONE TIME FOR ALL PROJECTS
+
+S2: ng new ${ProjectName} // FOR EACH TIME YOU CREATE A NEW PROJECT
+S3: cd ./${projectName} // Move Terminal To Project Path
+S3: ng serve
