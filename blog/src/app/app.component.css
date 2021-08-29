@@ -1,0 +1,12 @@
+.header {
+    font-size: 2rem;
+    color: skyblue;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

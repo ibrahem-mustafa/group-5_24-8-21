@@ -1,0 +1,34 @@
+MULTI USER TODO MANAGER
+
+// AUTHENTICATION
+
+// 1: Signup
+// 2: signin
+
+// BLOGGING
+
+// 1: GET all todos // User todos
+// /todos/[:id]
+// 2: GET todo by id
+// 3: POST new todo
+// 4: PUT (update) todo
+// 5: DELETE todo
+
+// MODELING
+
+USER {
+    name,
+    email,
+    password
+}
+
+TODO {
+    title,
+    completed: true | false,
+    createdBy: {{UserID}},
+    createdAt: Date
+}
+
+// NOTES
+// 1: Password Encryption
+// 2: Request Validation
