@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+
   // PART 1
 
   // title = 'Master Blog';
@@ -88,7 +89,7 @@ export class AppComponent {
     'todo 3',
     'todo 4',
     'todo 5',
-    'todo 6',
+
   ]
 
   user = {
