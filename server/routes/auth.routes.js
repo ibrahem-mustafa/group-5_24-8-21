@@ -28,7 +28,12 @@ router.post('/signup', async (req, res) => {
 
     await user.save()
 
-    res.status(201).json({user})
+
+    // delete user['password']
+
+    const data = UserDTO(user);
+
+    res.status(201).json({user: data})
 })
 
 router.post('/signin', async (req, res) => {

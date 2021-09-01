@@ -1,7 +1,9 @@
+<app-todo-form></app-todo-form>
+
 <ul>
     <app-todo-list-item 
         *ngFor="let todo of todos" 
-        [todoText]="todo" 
+        [todo]="todo" 
     ></app-todo-list-item>
     <!-- <app-todo-list-item 
         *ngFor="let todo of todos" 

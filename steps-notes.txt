@@ -29,7 +29,6 @@
 // For Percent [value | percent]
 // For Currency [value | currency, currency: 'LE' : code]
 // For Date [value | date:'short, shortDate, shortTime, long, longDate, longTime']
-
 5: Component Interactions // @Input() & @Output()
 6: Services
 \\\\\\\\\\\\\\\\\\/////////////////
@@ -39,6 +38,7 @@
 8: HTTP & Observable
 9: Fetch Data Via Http Requests // HttpClientModule // import {HttpClientModule}  from '@angular/common/http'
 10: Handling Http Errors
+
 11: Routing And Navigation
 12: router-outlet
 13: routerLink

@@ -9,7 +9,12 @@ import { TodosService } from 'src/app/services/todos.service';
 export class TodoListComponent implements OnInit {
   constructor(private todosSrv: TodosService) {}
 
-  ngOnInit(): void {}
+  
+  ngOnInit(): void {
+
+    this.todosSrv.fetchTodo();
+    
+  }
 
   get todos() {
     return this.todosSrv.todos

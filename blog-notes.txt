@@ -8,3 +8,9 @@
 // delete article
 // get single article details
 // get article list
+
+
+///////////////////////////////////////////////
+// Authentication
+// 1: auth (signin, signup) // auth service
+// 2: user data management // user service
