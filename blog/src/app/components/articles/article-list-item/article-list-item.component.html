@@ -1,0 +1,10 @@
+<div class="card" style="width: 250px;">
+  <div class="card-body">
+    <h5 class="card-title">{{article.title}}</h5>
+    <p class="card-text"> {{article.content | slice:0:60 }}... </p>
+    <div class="d-flex justify-content-between" >
+        <button  [routerLink]="'/articleForm/' + article._id" class="btn btn-success">Edit</button>
+        <button (click)="deleteArticle()" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+</div>

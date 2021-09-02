@@ -14,6 +14,10 @@ import { SigninComponent } from './views/auth/signin/signin.component';
 import { SingupComponent } from './views/auth/singup/singup.component';
 import { DefaultBarComponent } from './components/bars/default-bar/default-bar.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { ArticleListComponent } from './components/articles/article-list/article-list.component';
+import { ArticleListItemComponent } from './components/articles/article-list-item/article-list-item.component';
+import { ActionsBarComponent } from './components/bars/actions-bar/actions-bar.component';
+import { ArticleFormComponent } from './views/article-form/article-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
     SingupComponent,
     DefaultBarComponent,
     NotFoundComponent,
+    ArticleListComponent,
+    ArticleListItemComponent,
+    ActionsBarComponent,
+    ArticleFormComponent,
   ],
   imports: [
     BrowserModule,

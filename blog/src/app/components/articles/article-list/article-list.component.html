@@ -1,0 +1,6 @@
+<h2 class="mb-3">Articles</h2>
+<div class="row" >
+    <div class="col col-sm-12 col-md-4" *ngFor="let art of articles">
+        <app-article-list-item [article]="art" ></app-article-list-item>
+    </div>
+</div>

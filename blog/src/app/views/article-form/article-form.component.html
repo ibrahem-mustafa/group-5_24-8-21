@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center">
+  <div style="width: 50%">
+    <h1> {{ editMode ? 'Update Article' : 'Create Article'}} </h1>
+    <hr />
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+      [(ngModel)]="title"
+        type="title"
+        class="form-control"
+        id="title"
+        placeholder="Article Title"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label"
+        >Content</label
+      >
+      <textarea
+        [(ngModel)]="content"
+        class="form-control"
+        id="content"
+        placeholder="Article Content"
+        rows="6"
+      ></textarea>
+    </div>
+    <div class="mb-3  d-flex justify-content-center">
+      <button (click)="submit()" class="btn btn-success" >Submit</button>
+    </div>
+  </div>
+</div>
